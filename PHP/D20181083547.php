@@ -37,7 +37,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
 <div class="container">
     <tr>
         <td>
-            <img src = "../books/><?php echo $user_data['picture'];?>">
+            <img src = "../books/<?php echo $user_data['picture'];?>">
 
             <p class='p2'>Penulis:<span class='p3'><?php echo $user_data['author'];?></span>
 
@@ -55,8 +55,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
     $i++;
 }
 ?>
-
-</table>
 </body>
 </html>
 
