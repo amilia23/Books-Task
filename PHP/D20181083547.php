@@ -35,10 +35,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
 <table>
     <tr>
 <?php
-    $i = 1;
+    $i = 0;
 	while ($user_data = mysqli_fetch_array($result)) {
+$i++;
 ?>
-        <td>
+        <td style="margin: 10px;">
             <img src = "../books/<?php echo $user_data['picture'];?>">
 
             <p class='p2'>Penulis:<span class='p3'><?php echo $user_data['author'];?></span>
@@ -53,7 +54,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
 <?php continue;  } ?>
         </td>
 <?php
-    $i++;
 }
 ?>
     </tr>
