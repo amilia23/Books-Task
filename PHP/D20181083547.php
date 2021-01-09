@@ -30,12 +30,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
         color: blue;
     }
     </style>
+
+<div class="container">
+<table>
+    <tr>
 <?php
     $i = 1;
 	while ($user_data = mysqli_fetch_array($result)) {
 ?>
-<div class="container">
-    <tr>
         <td>
             <img src = "../books/<?php echo $user_data['picture'];?>">
 
@@ -46,15 +48,17 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
             ?> </i>
 
             <center><button type = "button">Details</button></center>
-
+<?php  if ($i % 3 == 0) { ?>
+</td></tr><tr>
+<?php continue;  } ?>
         </td>
-    </tr>
-</div>
-
 <?php
     $i++;
 }
 ?>
+    </tr>
+</table>
+</div>
 </body>
 </html>
 
