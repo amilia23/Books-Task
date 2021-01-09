@@ -41,9 +41,9 @@ $result = mysqli_query($mysqli, "SELECT * FROM books ORDER BY id ASC");
 
             <p class='p2'>Penulis:<span class='p3'><?php echo $user_data['author'];?></span>
 
-            <?php
+            <i><?php
                  echo $user_data['category'];
-            ?> 
+            ?> </i>
 
             <center><button type = "button">Details</button></center>
 
